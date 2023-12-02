@@ -11,4 +11,5 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 - 
 
 ## Cohort Analysis
-![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/2377cdae-a31e-424b-ba90-52709bf00e07)
+![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/ffb62019-902b-49a0-b091-7a3c61c1ccd0)
+
