@@ -95,6 +95,7 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
   - avg_spend - Average spending of customer per transaction
   - avg_spend_3m - Average spending of a customer per transaction last 3 months
   - avg_spend_6m - Average spending of a customer per transaction last 3 months
+  - avg_sabal_month - Average saving balance of customer
 - Feature choosing from domain knowledge
   - count_txn - Count of transactions of a customer
   - count_txn_3m - Count of transactions of a customer last 3 months
@@ -119,8 +120,7 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 # Model Training
 1. Train test split (70: 30)
 2. Model training
-3. Scoring
-4. Model evaluation
+3. Model evaluation
 
 ## Train test split
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/a6248490-0158-46d0-9b7b-de92e6536f28' width="300" height="300">
@@ -144,12 +144,16 @@ Model
 ### Feature Importance
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/da6d1cb3-4085-41de-90cb-ff846fad3fd3' width="600" height="300">
 
-### Chap plot
+- avg_spend is the highest important feature.
+- Followed by avg_spend_6m, avg_sabal_month, avg_spend_3m and total_spend respectively.
+
+### CHAP plot
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/21a49290-3d2b-41d9-904a-8a1d0fa3b305' width="400" height="450">
 
-
+- The more value of avg_spend, total_spend and avg_sabal_month the more probability to churn
 
 # Recommendations
 - The F2 score is very high, It may be because the model is overfitted from the training data size is too small suggest collecting more data for better performance of the model
+- After adding the training dataset the best performance model might be changed
 - The transaction log date should start from 01/01/2017
 
