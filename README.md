@@ -71,7 +71,12 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 
 # EDA
 
-### Personal information of customers dataset
+### Categorical data
+
+![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/ad500b8a-f125-4101-9db2-377e9189579e)
+![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/bb4d42a8-2a86-43b6-b6af-d66db0e874aa)
+![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/38ec531b-c33b-4ea7-897f-3b6b3406d662)
+![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/f1d11b49-96c3-40e9-9cae-f0bea93bef61)
 
 
 
@@ -105,6 +110,7 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 
 ## Train test split
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/a6248490-0158-46d0-9b7b-de92e6536f28' width="300" height="300">
+
 - Target data are imbalanced 26.3% on the positive label
 - Split data the performed upsampling with SMOTE on the training dataset
 
@@ -120,6 +126,14 @@ Model
 ### Evaluation Score: F2
 - Inactive customers: 0.9951
 - Active customers: 0.9926
+
+### Feature Importance
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/da6d1cb3-4085-41de-90cb-ff846fad3fd3' width="600" height="300">
+
+### Chap plot
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/21a49290-3d2b-41d9-904a-8a1d0fa3b305' width="400" height="450">
+
+
 
 # Recommendations
 - The F2 score is very high, It may be because the model is overfitted from the training data size is too small suggest collecting more data for better performance of the model
