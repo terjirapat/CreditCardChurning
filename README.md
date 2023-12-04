@@ -73,24 +73,38 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 
 ### Categorical data
 
-![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/ad500b8a-f125-4101-9db2-377e9189579e)
-![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/bb4d42a8-2a86-43b6-b6af-d66db0e874aa)
-![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/38ec531b-c33b-4ea7-897f-3b6b3406d662)
-![image](https://github.com/terjirapat/CreditCardChurning/assets/77285026/f1d11b49-96c3-40e9-9cae-f0bea93bef61)
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/ad500b8a-f125-4101-9db2-377e9189579e' width="300" height="250">
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/bb4d42a8-2a86-43b6-b6af-d66db0e874aa' width="300" height="250">
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/38ec531b-c33b-4ea7-897f-3b6b3406d662' width="300" height="250">
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/f1d11b49-96c3-40e9-9cae-f0bea93bef61' width="300" height="250">
 
+- Target does not seem to be related with any categorical in the personal information of customers' dataset
 
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/68cef2c8-4b65-4ca9-bd55-a616c31049c0' width="500" height="280">
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/10ebc095-34fa-4c1b-92de-df9894f01d32' width="500" height="280">
 
-
+- Target does not seem to be related to the merchant category 
 
 ## Correlation plot
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/e6817eff-2cc5-473d-8b96-9c02d70640c4' width="700" height="700">
 
-- Aggregate value and create a new dataframe to create a correlation plot for choosing low correlation features with target value out
-- Decided to remove the feature
-  - cus_dur - Customer duration
-  - age - Customer age
-  - card_count - Number of credit card of the customer
-  - total_netinflow - Total net inflow of money in the customer's bank account
+- Feature choosing from high correlation with the target
+  - total_spend - Total spending of customer
+  - total_spend_3m - Total spending of a customer last 3 months
+  - total_spend_6m - Total spending of a customer last 6 months
+  - avg_spend - Average spending of customer per transaction
+  - avg_spend_3m - Average spending of a customer per transaction last 3 months
+  - avg_spend_6m - Average spending of a customer per transaction last 3 months
+- Feature choosing from domain knowledge
+  - count_txn - Count of transactions of a customer
+  - count_txn_3m - Count of transactions of a customer last 3 months
+  - count_txn_6m - Count of transactions of a customer last 6 months
+  - count_day - Count of unique day transactions
+  - count_day_3m - Count of unique day transactions last 3 months
+  - count_day_6m - Count of unique day transactions last 6 months
+  - count_month - Count of unique month transactions
+  - count_month_3m - Count of unique month transactions last 3 months
+  - count_month_6m - Count of unique month transactions last 6 months
 
 ## Cohort Analysis
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/ffb62019-902b-49a0-b091-7a3c61c1ccd0' width="700" height="300">
