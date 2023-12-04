@@ -17,16 +17,17 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 - dtxn.csv - Incoming and outgoing transactions aggregated by months (exclude credit card transactions) 
 
 **Process:**
-1. Explore dataset
-2. Clean and prepare data
-3. Model training
-4. Model evaluation
-5. Conclusion and recommendations
+1. Clean and prepare data
+2. Explore dataset
+3. EDA
+4. Model training
+5. Model evaluation
+6. Conclusion and recommendations
 
 
-# Data Exploration & Preparation
+# Clean and prepare data
 
-## Cleaning missing data
+- Handle with a null value
 
 ### Personal information of customers dataset
 
@@ -39,7 +40,7 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
   
 **Solution**: replace null with 'unk' value
 
-## Prepare and Explore dataset
+# Explore dataset
 
 ### Personal information of customers dataset
 - Create an age of customers column (age) from > 2018 - birth_year column
@@ -68,8 +69,19 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/6bf7909f-7d75-40e2-bdd5-c666bdd67429' width="800" height="150">
 
+# EDA
+
+### Personal information of customers dataset
+
+
+
 ## Cohort Analysis
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/ffb62019-902b-49a0-b091-7a3c61c1ccd0' width="700" height="300">
+
+## Correlation plot
+- Aggregate value and create a new dataframe to create a correlation plot for choosing low correlation features with target value out
+
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/e6817eff-2cc5-473d-8b96-9c02d70640c4' width="700" height="700">
 
 # Model Training
 1. Train test split (70: 30)
