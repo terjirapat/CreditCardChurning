@@ -75,13 +75,27 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 
 
 
+
+
+## Correlation plot
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/e6817eff-2cc5-473d-8b96-9c02d70640c4' width="700" height="700">
+
+- Aggregate value and create a new dataframe to create a correlation plot for choosing low correlation features with target value out
+- Decided to remove the feature
+  - cus_dur - Customer duration
+  - age - Customer age
+  - card_count - Number of credit card of the customer
+  - total_netinflow - Total net inflow of money in the customer's bank account
+
 ## Cohort Analysis
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/ffb62019-902b-49a0-b091-7a3c61c1ccd0' width="700" height="300">
 
-## Correlation plot
-- Aggregate value and create a new dataframe to create a correlation plot for choosing low correlation features with target value out
+- There are no new customers after April 2007
+- Customers have an extremely high retention rate 99%-100%
 
-<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/e6817eff-2cc5-473d-8b96-9c02d70640c4' width="700" height="700">
+## Customer Movement Analysis
+
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/9fc7eda1-908c-422f-accb-3f2a91b62618' width="600" height="350">
 
 # Model Training
 1. Train test split (70: 30)
@@ -89,7 +103,25 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 3. Scoring
 4. Model evaluation
 
+## Train test split
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/a6248490-0158-46d0-9b7b-de92e6536f28' width="300" height="300">
+- Target data are imbalanced 26.3% on the positive label
+- Split data the performed upsampling with SMOTE on the training dataset
+
+## Model training
+
+Model
+
+## Model evaluation
+
+### Confusion matrix
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/9baa8f73-e9d9-464e-9d13-8d27daccf227' width="300" height="250">
+
+### Evaluation Score: F2
+- Inactive customers: 0.9951
+- Active customers: 0.9926
+
 # Recommendations
-- Collect more data on the target dataset for better performance of the model
+- The F2 score is very high, It may be because the model is overfitted from the training data size is too small suggest collecting more data for better performance of the model
 - The transaction log date should start from 01/01/2017
 
