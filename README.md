@@ -83,7 +83,7 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/68cef2c8-4b65-4ca9-bd55-a616c31049c0' width="500" height="280">
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/10ebc095-34fa-4c1b-92de-df9894f01d32' width="500" height="280">
 
-- Target does not seem to be related to the merchant category 
+- Target does not seem to be related to the total spending and transactions count of each merchant category
 
 ## Correlation plot
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/e6817eff-2cc5-473d-8b96-9c02d70640c4' width="700" height="700">
@@ -113,33 +113,40 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 - There are no new customers after April 2007
 - Customers have an extremely high retention rate 99%-100%
 
-## Customer Movement Analysis
-
-<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/9fc7eda1-908c-422f-accb-3f2a91b62618' width="600" height="350">
-
 # Model Training
-1. Train test split (70: 30)
-2. Model training
-3. Model evaluation
+1. Prepare data
+2. Train test split (70: 30)
+3. Model training
+4. Model evaluation
 
-## Train test split
+## Prepare data
+
+### Standardize features
+
+- Using StandardScaler
+- Formular > z = (x - u) / s
+
+### Handle imbalanced
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/a6248490-0158-46d0-9b7b-de92e6536f28' width="300" height="300">
 
 - Target data are imbalanced 26.3% on the positive label
-- Split data the performed upsampling with SMOTE on the training dataset
+- Performed upsampling with SMOTE on the training dataset
 
 ## Model training
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/62c20afa-8d80-4ed8-a9f7-7f14d680ce24' width="500" height="250">
 
-Model
+- Using pycaret to perform cross-validation
+- The best model is **Naive Bayes** measured by F2 score = 0.992119
+- Choosing the Naive Bayes model for classification
 
 ## Model evaluation
 
 ### Confusion matrix
-<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/9baa8f73-e9d9-464e-9d13-8d27daccf227' width="300" height="250">
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/b062e66b-ca39-41dc-b805-33892b79fada' width="300" height="250">
 
 ### Evaluation Score: F2
-- Inactive customers: 0.9951
-- Active customers: 0.9926
+- Inactive customers: 0.9856
+- Active customers: 0.9777
 
 ### Feature Importance
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/da6d1cb3-4085-41de-90cb-ff846fad3fd3' width="600" height="300">
