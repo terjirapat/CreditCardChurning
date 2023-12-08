@@ -133,28 +133,33 @@ The Churn Prediction Challenge involves data exploration and preparation, involv
 - Performed upsampling with SMOTE on the training dataset
 
 ## Model training
-<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/62c20afa-8d80-4ed8-a9f7-7f14d680ce24' width="500" height="250">
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/b14b3071-3ee8-4c1a-a46d-d3632a0463e7' width="600" height="300">
 
 - Using pycaret to perform cross-validation
-- The best model is **Naive Bayes** measured by F2 score = 0.992119
-- Choosing the Naive Bayes model for classification
+- The best model is **XGBoost** measured by F2 score = 0.991100
+- Choosing the XGBoost model for classification
 
 ## Model evaluation
 
 ### Confusion matrix
-<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/b062e66b-ca39-41dc-b805-33892b79fada' width="300" height="250">
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/7317ddb7-b50a-4c42-9f66-9733521da690' width="300" height="250">
 
 ### Evaluation Score: F2
-- Inactive customers: 0.9856
-- Active customers: 0.9777
+- Inactive customers: 1
+- Active customers: 1
 
-### Feature Importance
+### Feature Importance: XGBoost
+<img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/d0bb23e5-9b2a-4639-ad28-ddcbf8ac5397' width="600" height="300">
+
+- avg_spend is the highest important feature.
+
+### Feature Importance: Random Forest
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/da6d1cb3-4085-41de-90cb-ff846fad3fd3' width="600" height="300">
 
 - avg_spend is the highest important feature.
 - Followed by avg_spend_6m, avg_sabal_month, avg_spend_3m and total_spend respectively.
 
-### CHAP plot
+### CHAP plot: Random Forest
 <img src='https://github.com/terjirapat/CreditCardChurning/assets/77285026/21a49290-3d2b-41d9-904a-8a1d0fa3b305' width="400" height="450">
 
 - The more value of avg_spend, total_spend and avg_sabal_month the more probability to churn
